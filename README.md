@@ -144,8 +144,8 @@ npm run dev
 
 After running the seed script:
 
-- **Email**: `demo@learningpath.com`
-- **Password**: `demo123`
+- **Email**: `test@gmaill.com`
+- **Password**: `123456`
 
 The demo account includes:
 

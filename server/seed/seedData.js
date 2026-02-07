@@ -14,7 +14,7 @@ const seedData = async () => {
     console.log("✅ Connected to MongoDB");
 
     // Check if demo user exists
-    const existingUser = await User.findOne({ email: "demo@learningpath.com" });
+    const existingUser = await User.findOne({ email: "test@gmaill.com" });
 
     if (existingUser) {
       console.log("⚠️  Demo user already exists. Deleting and recreating...");
@@ -25,11 +25,11 @@ const seedData = async () => {
 
     // Create demo user
     const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash("demo123", salt);
+    const hashedPassword = await bcrypt.hash("123456", salt);
 
     const demoUser = await User.create({
       name: "Demo User",
-      email: "demo@learningpath.com",
+      email: "test@gmaill.com",
       password: hashedPassword,
     });
     console.log("✅ Demo user created");
@@ -256,8 +256,8 @@ const seedData = async () => {
 
     console.log("\n🎉 Seed data created successfully!");
     console.log("\n📋 Demo Account Credentials:");
-    console.log("   Email: demo@learningpath.com");
-    console.log("   Password: demo123\n");
+    console.log("   Email: test@gmaill.com");
+    console.log("   Password: 123456\n");
 
     await mongoose.connection.close();
     console.log("✅ Database connection closed");
